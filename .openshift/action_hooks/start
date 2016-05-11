@@ -2,7 +2,22 @@
 set -x
 cd $OPENSHIFT_DATA_DIR
 
+if [ -d $OPENSHIFT_DATA_DIR/tomcat8 ]
+then
+    # Java 1.8 set env
+    export PATH=$OPENSHIFT_DATA_DIR/jdk1.8.0_72/bin:$PATH
+    export JAVA_HOME=$OPENSHIFT_DATA_DIR/jdk1.8.0_72/
 
+    # Ant 1.9 set env
+    ANT_HOME=$OPENSHIFT_DATA_DIR/apache-ant-1.9.6
+    ANT_OPTS="-Xms256M -Xmx512M"
+    PATH=$PATH:$HOME/bin:$ANT_HOME/bin
+    export ANT_HOME ANT_OPTS PATH
+
+	cd tomcat8/bin
+	./startup.sh
+    exit 0
+else
     # Java 1.8 Installation and Configuration
     cd $OPENSHIFT_DATA_DIR
 
