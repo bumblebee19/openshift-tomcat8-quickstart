@@ -28,7 +28,7 @@ else
 
     # Apache Ant Installation and Configuration
     cd $OPENSHIFT_DATA_DIR
-    wget https://www.apache.org/dist/ant/binaries/apache-ant-1.9.6-bin.zip
+    wget https://www.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.tar.bz2
     unzip apache-ant-1.9.6-bin.zip
     ANT_HOME=$OPENSHIFT_DATA_DIR/apache-ant-1.9.6
     ANT_OPTS="-Xms256M -Xmx512M"
