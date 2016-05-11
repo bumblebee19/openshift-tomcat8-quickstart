@@ -9,7 +9,7 @@ then
     export JAVA_HOME=$OPENSHIFT_DATA_DIR/jdk1.8.0_72/
 
     # Ant 1.9 set env
-    ANT_HOME=$OPENSHIFT_DATA_DIR/apache-ant-1.9.6
+    ANT_HOME=$OPENSHIFT_DATA_DIR/apache-ant-1.9.7
     ANT_OPTS="-Xms256M -Xmx512M"
     PATH=$PATH:$HOME/bin:$ANT_HOME/bin
     export ANT_HOME ANT_OPTS PATH
@@ -28,9 +28,9 @@ else
 
     # Apache Ant Installation and Configuration
     cd $OPENSHIFT_DATA_DIR
-    wget https://www.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.tar.bz2
-    unzip apache-ant-1.9.7-bin.tar.bz2
-    ANT_HOME=$OPENSHIFT_DATA_DIR/apache-ant-1.9.6
+    wget https://www.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.zip
+    unzip apache-ant-1.9.7-bin.zip
+    ANT_HOME=$OPENSHIFT_DATA_DIR/apache-ant-1.9.7
     ANT_OPTS="-Xms256M -Xmx512M"
     PATH=$PATH:$HOME/bin:$ANT_HOME/bin
     export ANT_HOME ANT_OPTS PATH
